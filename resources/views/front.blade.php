@@ -318,7 +318,7 @@
                             <!--begin::Content-->
                             <div class="fs-6 fw-bolder">
                                 <!--begin::Author-->
-                                <a href="../../demo20/dist/pages/user-profile/overview.html" class="text-gray-700 text-hover-primary fs-5 tit">Jane Miller</a>
+                                <a href="../../demo20/dist/pages/user-profile/overview.html" class="text-gray-700 text-hover-primary fs-5 tit">{{ $sportList->user->name }}</a>
                                 <!--end::Author-->
                             </div>
                             <!--end::Content-->
@@ -564,7 +564,7 @@
                             <!--end::Title-->
                             <div class=" py-4 d-flex flex-lg-row">
                                 <!--begin::Text-->
-                                <a href="{{ route('styles_details', $style->id) }}" class="fw-bolder text-dark mb-4 tit">{{ $style->title }}</a>
+                                <a href="{{ route('styles_details', $style->id) }}" class="fw-bolder text-dark mb-4 tit">{{ Str::limit($style->title, 60, '..') }}</a>
                                 <!--end::Text-->
                                 <img src="{{ asset('storage/' . $style->cover_image) }}" style="height: 180px; width:200px; margin-left: 40px;" alt="">
                             </div>
@@ -686,7 +686,7 @@
                         </svg>
                     </a>
                     <!--begin::post-->
-                    @foreach($stories as $story)
+                    @foreach($storiesList as $story)
                     <div class="ps-lg-6 mt-md-0 mt-17">
                         <div class="">
                             <!--begin::Title-->
@@ -694,7 +694,7 @@
                             <!--end::Title-->
                             <div class=" py-4 d-flex flex-lg-row">
                                 <!--begin::Text-->
-                                <a href="#" class="fw-bolder text-dark mb-4 tit">{{ $story->title }}</a>
+                                <a href="#" class="fw-bolder text-dark mb-4 tit">{{ Str::limit($story->title, 60, '..') }}</a>
                                 <!--end::Text-->
                                 <img src="{{ asset('storage/' . $story->cover_image) }}" style="height: 180px; width:200px;margin-left: 40px;">
                             </div>

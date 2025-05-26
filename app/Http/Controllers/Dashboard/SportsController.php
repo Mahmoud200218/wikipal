@@ -46,14 +46,14 @@ class SportsController extends Controller
         $request->validate([
             'title' => 'required|string',
             'short_title' => 'required|string|max:50000',
-            'cover_image' => 'nullable|mimes:jpg,png,jpeg',
+            'cover_image' => 'required',
             'cover_image_description' => 'nullable|string|max:20000',
             'source_url_one' => 'nullable',
             'source_url_two' => 'nullable',
             'source_url_three' => 'nullable',
             'first_description' => 'required|string',
             'second_description' => 'nullable|string',
-            'other_image' => 'nullable|mimes:jpg,png,jpeg',
+            'other_image' => 'nullable',
         ]);
 
 
