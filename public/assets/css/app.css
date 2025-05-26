@@ -1,0 +1,1081 @@
+.tit {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    /* Elegant serif font */
+    font-size: 2.5rem;
+    /* Large font size */
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+    padding: 10px 0;
+    color: #111;
+    /* Darker color for readability */
+}
+
+.tit a {
+    color: #0645AD;
+    /* Link blue color */
+    text-decoration: none;
+    /* No underline by default */
+}
+
+.tit a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.desc {
+    font-family: "Linux Libertine", "Georgia", "Times", serif;
+    /* Serif font stack similar to Wikipedia */
+    font-size: 16px;
+    /* Base font size */
+    line-height: 1.6;
+    /* Spacing between lines for better readability */
+    color: #202122;
+    /* Dark gray for text color */
+    margin-top: 1em;
+    /* Add spacing above */
+    margin-bottom: 1em;
+    /* Add spacing below */
+}
+
+.desc a {
+    color: #0645AD;
+    /* Wikipedia's default link blue */
+    text-decoration: none;
+    /* No underline by default */
+}
+
+.desc a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.search-icon {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin-right: 6rem;
+    margin-top: -20px;
+}
+
+.search-icon:hover {
+    transform: scale(1.2);
+    color: #3498db;
+    /* Change to your desired hover color */
+}
+
+.search-icon svg {
+    transition: stroke 0.3s ease;
+}
+
+.search-icon:hover svg {
+    stroke: #3498db;
+    /* Matches the hover color */
+}
+
+/* Ticker Container */
+.news-ticker {
+    background: linear-gradient(45deg, #343a40, #212529);
+    /* Dark gray gradient for a sleek and subtle background */
+    color: white;
+    padding: 14px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+    margin-top: 15px;
+    /* Light shadow for depth */
+}
+
+/* Breaking News Label */
+.breaking {
+    background-color: #d32f2f;
+    /* Bold red for the label */
+    color: white;
+    font-weight: bold;
+    padding: 8px 18px;
+    margin-right: 18px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 1rem;
+}
+
+/* Marquee Text */
+.news-ticker-content {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 50px;
+}
+
+.news-ticker-content span {
+    display: inline-block;
+    animation: scroll 12s linear infinite;
+}
+
+.marquee {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    /* Soft light gray for readability */
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    /* Subtle shadow for readability */
+}
+
+.donate_section {
+    background-color: #e7f0fe;
+    width: 100%;
+    height: 12rem;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.donate_content {
+    padding-top: 30px;
+}
+
+
+/* Footer Container */
+.footer {
+    /* Dark background for contrast */
+    color: black;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Navigation */
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    color: black;
+    /* Light gray color for links */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-nav a:hover {
+    color: black;
+    /* Hover effect: bright color */
+    text-decoration: underline;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+    border-top: 1px solid #555555;
+    /* Light divider line */
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer-bottom a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Title Styling */
+.tit-style-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tit-style {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+
+/** Live icon **/
+/* Base container for the live icon */
+.live-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e0e0e0;
+    background-color: #333333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    width: 150px;
+    height: 50px;
+}
+
+/* Pulsating dot */
+.live-icon .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ff5722;
+    /* Bright orange-red for the dot */
+    border-radius: 50%;
+    animation: pulse 1.2s infinite;
+}
+
+/* Animation for the dot */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Text next to the dot */
+.live-icon .text {
+    text-transform: uppercase;
+    color: #f5f5f5;
+    /* Light gray text for better readability */
+}
+
+.line {
+    width: 120px;
+    height: 1px;
+    background-color: #111;
+    margin-top: -3px;
+}
+
+
+#video-container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#video-container iframe {
+    width: 300px;
+    height: 200px;
+    border: none;
+}
+
+
+.video-list {
+    flex: 1;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    min-width: 200px;
+}
+
+.video-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.video-list li {
+    margin: 10px 0;
+}
+
+.video-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.video-list a:hover {
+    text-decoration: underline;
+}
+
+.video-frame {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #ecf0f1;
+    margin: 10px 0 50px 0;
+}
+
+.video-frame iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 8px;
+}
+
+.center_parent {
+    display: flex;
+    justify-content: center;
+    /* Horizontal alignment */
+    align-items: center;
+    /* Vertical alignment */
+    bottom: 0;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    /* Move to the vertical center */
+    left: 50%;
+    /* Move to the horizontal center */
+    transform: translate(-50%, -50%);
+}
+
+
+.no-items-container {
+    text-align: center;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.no-items-image {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.no-items-title {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.no-items-text {
+    font-size: 16px;
+    margin: 10px 0 30px;
+    color: #777;
+}
+
+.no-items-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.no-items-button:hover {
+    background-color: #0056b3;
+}
+
+.img-style {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-style-list {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Style for the form to align with nav-item */
+.locale-form {
+    display: inline-block;
+    margin: 0;
+}
+
+/* Style for the select element */
+.locale-select {
+    padding: 4px 6px;
+    font-size: 12px;
+    border: none;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+.locale-select:hover {
+    background-color: #e9ecef;
+    /* Slightly darker background on hover */
+}
+
+.locale-select option {
+    background-color: #fff;
+    color: #333;
+}
+
+/* For larger screens, you can adjust font-size or spacing */
+@media (min-width: 768px) {
+    .locale-select {
+        font-size: 16px;
+    }
+}
+
+.navbar .date-time {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+
+/* General Reset */
+.comment-card {
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #777;
+}
+
+.options-dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 5px;
+    width: 150px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.comment-body {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.reply-container {
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #ddd;
+}
+
+
+/* General Reset */
+
+/* Form Container */
+.form-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Success Alert */
+.alert-success {
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+
+.alert-title {
+    font-weight: bold;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Textarea */
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    border: none;
+    outline: none;
+    resize: none;
+    background-color: #f9f9f9;
+}
+
+.form-textarea:focus {
+    border: 1px solid #007bff;
+    background-color: #fff;
+}
+
+.form-textarea.error {
+    border: 1px solid #e3342f;
+    background-color: #fff0f0;
+}
+
+/* Error Message */
+.error-message {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #e3342f;
+}
+
+/* Submit Button */
+.form-submit {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #0056b3;
+}
+
+.form-submit:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+}
+
+
+/* General Reset */
+/* Reply Button */
+.reply-button {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.reply-button:hover {
+    color: #007bff;
+}
+
+.reply-button:focus {
+    outline: none;
+}
+
+/* Reply Icon */
+.reply-icon {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    stroke: #555;
+    transition: stroke 0.3s;
+}
+
+.reply-button:hover .reply-icon {
+    stroke: #007bff;
+}
+
+/* View Replies Button */
+.view-replies-button {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.view-replies-button:hover {
+    color: #007bff;
+}
+
+.view-replies-button:focus {
+    outline: none;
+}
+
+/* Loading Container */
+.loading-container {
+    margin-top: 10px;
+}
+
+
+/* General Reset */
+/* Like Button Container */
+.like-button-container {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Like Button */
+.like-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 14px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.like-button:hover {
+    color: #555;
+    transform: scale(1.1);
+}
+
+.like-button:focus {
+    outline: none;
+}
+
+/* Liked State */
+.like-button.liked {
+    color: #1e90ff;
+    /* Green for liked state */
+}
+
+.like-button.liked:hover {
+    color: #4682b4;
+}
+
+/* Like Icon */
+.like-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: transform 0.3s;
+}
+
+.like-button:hover .like-icon {
+    transform: scale(1.2);
+}
+
+/* Like Count */
+.like-count {
+    font-weight: 500;
+    color: #000;
+}
+
+/* General Button Styles */
+.icon {
+    font-size: 16px;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+
+/* General Button Styles */
+button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 0.875rem;
+    color: #6B7280;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+button:hover {
+    color: #4B5563;
+    /* Darker gray for hover */
+    text-decoration: underline;
+}
+
+button .icon {
+    width: 16px;
+    /* icon size */
+    height: 16px;
+    /* icon size */
+    margin-right: 8px;
+    /* Space between icon and text */
+    stroke: currentColor;
+}
+
+/* Loader Styles */
+.loader-container {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.loader {
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    border-top: 3px solid #4B5563;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Toggle Replies Button */
+.toggle-replies-button {
+    font-size: 0.875rem;
+    color: #6B7280;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggle-replies-button:hover {
+    color: #4B5563;
+}
+
+/* Styles for nested comment replies */
+.comment-child {
+    margin-left: 1.5rem;
+    /* Indentation for nested comments */
+    padding-left: 1.5rem;
+    border-left: 2px solid #E5E7EB;
+    /* Light border to visually separate nested comments */
+}
+
+/* Dark Mode */
+body.dark-mode button {
+    color: #D1D5DB;
+    /* text-gray-400 */
+}
+
+body.dark-mode button:hover {
+    color: #E5E7EB;
+    /* Light gray hover in dark mode */
+}
+
+body.dark-mode .loader {
+    border-top: 3px solid #D1D5DB;
+}
+
+.nav-link-donate {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #1e90ff;
+    padding: 8px 16px;
+    border: 2px solid #1e90ff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link-donate:hover {
+    background-color: #4682b4;
+    color: #ffff;
+    text-decoration: none;
+}
+
+
+.nav-link-dashboard {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    padding: 8px 16px;
+    border: 2px solid #080808;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+}
+
+.nav-link-dashboard:hover {
+    background-color: #080808;
+    color: #ffff;
+    text-decoration: none;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+}
+
+.box-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.latest_feed {
+    width: 160px;
+    height: 30px;
+    font-size: 16px;
+    position: absolute;
+    margin: -10px 0 0 18px;
+}
+
+.image-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.edit-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    color: #007bff;
+    /* اللون الأزرق */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 2px solid #007bff;
+    transition: all 0.3s ease;
+}
+
+.edit-btn i {
+    margin-right: 5px;
+}
+
+.edit-btn:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+.edit-btn:active {
+    transform: scale(0.98);
+}
+
+
+.delete-btn-up {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    color: #b82308;
+    /* اللون الأزرق */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 2px solid #b82308;
+    transition: all 0.3s ease;
+}
+
+.delete-btn-up i {
+    margin-right: 5px;
+}
+
+.delete-btn-up:hover {
+    background-color: #b82308;
+    color: white;
+    transform: scale(1.05);
+}
+
+.delete-btn-up:active {
+    transform: scale(0.98);
+}
+
+
+
+.delete-btn {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    /* Blue border */
+    color: #007bff;
+    /* Blue text */
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #007bff;
+    /* Blue background on hover */
+    color: white;
+    transform: scale(1.05);
+}
+
+.delete-btn i {
+    margin-right: 5px;
+}
+
+.toast-header {
+    background-color: #007bff;
+    /* Blue background for the header */
+    color: white;
+}
+
+.toast-body {
+    background-color: #f1f1f1;
+    /* Light gray background for the body */
+    color: #333;
+}
+
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Flash Message */
+.flash-success {
+    margin-top: 10px;
+    background-color: #2e9246;
+    color: #fff;
+    width: 400px;
+    padding: 12px 10px;
+}
+
+.flash-fail {
+    margin-top: 10px;
+    background-color: #923d2e;
+    color: #fff;
+    width: 400px;
+    padding: 12px 10px;
+}
+
+.trash {
+    color: #ca3939;
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+
