@@ -1076,28 +1076,6 @@
                     </div>
                     <!--end::Row-->
                     <!--begin::Calendar Widget 1-->
-                    <div class="card">
-                        <!--begin::Card header-->
-                        <div class="card-header">
-                            <h3 class="card-title align-items-start flex-column">
-                                <span class="card-label fw-bolder text-dark">Saved News</span>
-                                <span class="text-muted mt-1 fw-bold fs-7">Preview monthly events</span>
-                            </h3>
-                            <div class="card-toolbar">
-                                <a href="../../demo20/dist/apps/calendar.html" class="btn btn-primary">Manage</a>
-                            </div>
-                        </div>
-                        <!--end::Card header-->
-                        <!--begin::Card body-->
-                        <div class="card-body">
-                            <!--begin::Calendar-->
-                            <div id="kt_calendar_widget_1"></div>
-                            <!--end::Calendar-->
-                        </div>
-                        <!--end::Card body-->
-                    </div>
-                    <!--end::Calendar Widget 1-->
-                    <!--begin::Calendar Widget 1-->
                     <!--begin::Card header-->
                     <p class="badge bg-primary latest_feed" style="margin: 70px 0 20px 0;">Latest Bookmark</p>
                     <!--begin::Code-->

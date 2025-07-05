@@ -268,7 +268,7 @@ License: For each use you must have a valid license purchased only from above li
                             <!-- Footer Bottom (Copyright) -->
                             <div class="footer-bottom">
                                 <p>&copy; 2025 WikiPal. All Rights Reserved.</p>
-                                <p><a href="#">Cookie Preferences</a> | <a href="#">Ad Choices</a> | <a href="#">Terms</a></p>
+                                <p><a href="#">Cookie Preferences</a> | <a href="#">Ad Choices</a> | <a href="{{ route('/') }}">Help</a></p>
                             </div>
                         </footer>
                     </div>

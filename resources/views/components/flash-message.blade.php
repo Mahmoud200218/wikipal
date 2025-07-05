@@ -1,47 +1,84 @@
-@if(session()->has('success'))
-<div class="alert alert-success d-flex align-items-center p-4" role="alert" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin:0 30px;">
-    <div style="margin-right: 15px;">
-        <svg xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px; color: #28a745;" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm3.97-8.97a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-2.5-2.5a.75.75 0 0 1 1.06-1.06L8 10.44l3.97-3.97z" />
-        </svg>
-    </div>
-    <div>
-        <strong>Success!</strong> {{ session('success') }}
-    </div>
-</div>
-@endif
+@php
+    $alerts = [
+        'success' => ['title' => 'SUCCESS', 'color' => '#16a34a', 'bg' => '#f0fdf4', 'border' => '#bbf7d0', 'icon' => 'M5 13l4 4L19 7'],
+        'info' => ['title' => 'UPDATE', 'color' => '#2563eb', 'bg' => '#eff6ff', 'border' => '#bfdbfe', 'icon' => 'M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z'],
+        'danger' => ['title' => 'SUCCESS DELETE!', 'color' => '#dc2626', 'bg' => '#fef2f2', 'border' => '#fecaca', 'icon' => 'M6 18L18 6M6 6l12 12'],
+        'error' => ['title' => 'SORRY!', 'color' => '#b91c1c', 'bg' => '#fef2f2', 'border' => '#fecaca', 'icon' => 'M6 18L18 6M6 6l12 12'],
+    ];
+@endphp
 
-@if(session()->has('info'))
-<div class="alert alert-info d-flex align-items-center p-4" role="alert" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin:0 30px;">
-    <div style="margin-right: 15px;">
-        <svg xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px; color: #28a745;" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm3.97-8.97a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-2.5-2.5a.75.75 0 0 1 1.06-1.06L8 10.44l3.97-3.97z" />
-        </svg>
-    </div>
-    <div>
-        <strong>Success!</strong> {{ session('info') }}
-    </div>
-</div>
-@endif
+@foreach ($alerts as $type => $data)
+    @if(session()->has($type))
+        <div class="custom-alert" style="
+            background: {{ $data['bg'] }};
+            color: {{ $data['color'] }};
+            border: 1px solid {{ $data['border'] }};
+        " id="alert_{{ $type }}">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="{{ $data['icon'] }}" />
+                </svg>
+            </div>
+            <div class="message">
+                <span class="title">{{ $data['title'] }}</span>
+                <p>{{ session($type) }}</p>
+            </div>
+            <button class="close-btn" onclick="document.getElementById('alert_{{ $type }}').style.display='none'">
+                &times;
+            </button>
+        </div>
+    @endif
+@endforeach
 
-@if(session()->has('danger'))
-<div class="alert alert-danger d-flex align-items-center p-4" role="alert" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin:0 30px;">
-    <div style="margin-right: 15px;">
-        <svg xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px; color: #28a745;" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm3.97-8.97a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-2.5-2.5a.75.75 0 0 1 1.06-1.06L8 10.44l3.97-3.97z" />
-        </svg>
-    </div>
-    <div>
-        <strong>Success!</strong> {{ session('danger') }}
-    </div>
-</div>
-@endif
+<style>
+    .custom-alert {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 16px 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        margin: 20px 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: relative;
+        animation: fadeIn 0.5s ease-in-out;
+    }
 
+    .custom-alert .icon svg {
+        width: 28px;
+        height: 28px;
+    }
 
-@if(session()->has('error'))
-<div class="alert alert-danger d-flex align-items-center p-4" role="alert" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);margin:30px 0px;">
-    <div>
-        <strong>Sorry!</strong> {{ session('error') }}
-    </div>
-</div>
-@endif
+    .custom-alert .message .title {
+        display: block;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 3px;
+    }
+
+    .custom-alert .message p {
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .custom-alert .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: inherit;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .custom-alert .close-btn:hover {
+        opacity: 0.6;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>

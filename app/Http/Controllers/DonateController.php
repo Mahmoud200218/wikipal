@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use App\Http\Requests\DonateRequest;
 use App\Models\Donate;
 use App\Models\User;
+use App\Notifications\Admin\ContactNotification;
 use App\PaymentGateways\PaymentGatewaysFactory;
 use Illuminate\Http\Request;
 
 class DonateController extends Controller
 {
-     public function store(DonateRequest $request)
+    public function store(DonateRequest $request)
     {
         $data = $request->all();
 
@@ -19,9 +20,9 @@ class DonateController extends Controller
 
         $donate = Donate::create($data);
 
-        $admins = User::all();
+        // $admins = User::all();
         // foreach ($admins as $admin) {
-        //     $admin->notify(new DonateNotification($donate));
+        //     $admin->notify(new ContactNotification($donate));
         // }
 
         // Gateways 
